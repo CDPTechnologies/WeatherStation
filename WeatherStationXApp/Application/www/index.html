@@ -1,0 +1,69 @@
+<!--
+This is a simple HTML5 WebUI demo.
+
+The demo uses Semantic UI http://semantic-ui.com and Vuejs https://vuejs.org to demonstrate usage
+of studioapi web interface.
+
+With single application system on a loopback interface you can just run the application
+after adding the UI demo and use web browser to navigate to http://127.0.0.1:7689/www/index.html
+
+You may verify the url by looking at the Application Output in studio to verify where
+the studioapi server is listening: "StudioAPIServer: listening on 127.0.0.1:7689".
+
+The demo displays the Application card where it is connected to and Component cards for its toplevel components.
+
+The studioapi usage is in model.js file and the Application and Component cards displayed
+are defined in vue.app-card.js and vue.component-card.js respectively.
+
+For information on the studioapi itself look at the WebUI help pages in studio.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="./semantic.min.css">
+  <script src="./jquery.slim.min.js"></script>
+  <script src="./semantic.min.js"></script>
+  <script src="./long.min.js"></script>
+  <script src="./vue.min.js"></script>
+  <script src="./vue.common.min.js"></script>
+  <script src="./bytebuffer.min.js"></script>
+  <script src="./protobuf.min.js"></script>
+  <script src="./studioapi.js"></script>
+  <script src="./vue.expand.js"></script>
+  <script src="./vue.component-card.js"></script>
+  <script src="./vue.app-card.js"></script>
+  <script src="./model.js" defer></script>
+</head>
+
+<body>
+  <div id="vueapp">
+    <div class="ui grid container">
+      <div class="ui top fixed menu">
+        <div class="item">
+          <img src="./images/cdpstudio.png">
+        </div>
+        <div class="item">WeatherStation</div>
+      </div>
+      <div style="height:128px"></div>
+      <div class="sixteen wide column">
+        <div class="ui four stackable cards">
+          <app-card :appname="name" :description="description" :cpuload="cpuload" :timeelapsed="timeelapsed"></app-card>
+        </div>
+      </div>
+      <div class="row">
+      <h4 class="ui horizontal divider header">
+        <i class="sitemap icon"></i> Components
+      </h4>
+      </div>
+      <div class="sixteen wide column">
+        <div class="ui four stackable cards">
+          <component-card v-for="c in components" :name="c.name" :description="c.description" :state="c.state" :fs="c.fs" :priority="c.priority" :timer="c.timer" :period="c.period" :suspended="c.suspended"></component-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- CDP2QT interface component. -->
+<Component Name="CDP2Qt" Model="CDP2Qt" Description='Provides Qt based user interface in a CDP Application.' Activate="1">
+
+  <!-- The QT GUI refresh rate -->
+  <fs>30</fs>
+
+  <!-- The QT ui page (path must be relative to executable) -->
+  <ui>mainwidget.ui</ui>
+
+  <InstanceHelp></InstanceHelp>
+  <HtmlPage></HtmlPage>
+
+  <Signals>
+    <Signal Name="Process Timer" Value="0.0" Unit="s/s" Type="double" Description="Process run time each s." DisplayLevel="10"  Model="CDPSignal&lt;double&gt;"></Signal>
+    <Signal Name="Process Period" Value="0.0" Unit="s" Type="double" Description="Process interval [s]." DisplayLevel="10"  Model="CDPSignal&lt;double&gt;"></Signal>
+    <Signal Name="Update Duration" Input="0" Model="CDPSignal&lt;double&gt;" Type="double" Unit="s" Description="Run time for the periodic update function."></Signal>
+  </Signals>
+
+  <Alarms>
+  </Alarms>
+
+  <Parameters>
+  </Parameters>
+
+</Component>

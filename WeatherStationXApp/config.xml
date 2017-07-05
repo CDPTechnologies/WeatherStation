@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ProjectConfiguration>
+<!-- Written by CDPStudio 1.2.0, 2017-07-05T13:41:52. -->
+<qtcreator>
+ <data>
+  <variable>ProjectManagerSettings</variable>
+  <valuemap type="QVariantMap">
+   <valuemap type="QVariantMap" key="ApplicationSettings">
+    <value type="QString" key="DeployDirectory">C:/CDPStudioWorkspace/deployments/systems/WeatherStationX/WeatherStationXApp</value>
+    <value type="QString" key="DeviceId">Desktop Device</value>
+    <value type="QString" key="TargetFriendlyName">Windows 32bit</value>
+   </valuemap>
+  </valuemap>
+ </data>
+</qtcreator>
