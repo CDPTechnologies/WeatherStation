@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <Application Name="WeatherGUI" Model="Application" Description='This is a template for creating CDP controller applications.'>
-  <ApplicationHandle>1</ApplicationHandle>
+  <ApplicationHandle>2</ApplicationHandle>
   <fs>10</fs>
   <ClockSync>None</ClockSync>
   <IsTimeServer>0</IsTimeServer>
   <OStimeInterval>120</OStimeInterval>
 
-  <NetworkInterface Name="ETH0" MAC="" IPAddress="127.0.0.1" SubnetMask="255.255.255.255"></NetworkInterface>
+  <NetworkInterface Name="ETH0" MAC="" IPAddress="192.168.1.202" SubnetMask="255.255.255.255"></NetworkInterface>
 
   <CDPMessages>
     <TimestampLocal>1</TimestampLocal>

@@ -6,8 +6,8 @@
   <variable>ProjectManagerSettings</variable>
   <valuemap type="QVariantMap">
    <valuemap type="QVariantMap" key="ApplicationSettings">
-    <value type="QString" key="DeployDirectory">WeatherStationX/WeatherStationXApp</value>
-    <value type="QString" key="DeviceId">192.168.1.201WeatherStationXethernet_32769</value>
+    <value type="QString" key="DeployDirectory">WeatherStationX/OutsideWeather</value>
+    <value type="QString" key="DeviceId">192.168.1.77WeatherStationXethernet_32769</value>
     <value type="QString" key="TargetFriendlyName">Raspbian Jessie 32bit</value>
    </valuemap>
   </valuemap>

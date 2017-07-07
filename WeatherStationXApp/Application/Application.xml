@@ -7,7 +7,7 @@
   <IsTimeServer>0</IsTimeServer>
   <OStimeInterval>120</OStimeInterval>
 
-  <NetworkInterface Name="ETH0" MAC="" IPAddress="127.0.0.1" SubnetMask="255.255.255.255"></NetworkInterface>
+  <NetworkInterface Name="ETH0" MAC="" IPAddress="192.168.1.201" SubnetMask="255.255.255.255"></NetworkInterface>
 
   <CDPMessages>
     <TimestampLocal>1</TimestampLocal>
@@ -17,7 +17,6 @@
   <Subcomponents>
     <Subcomponent Name="CDP"        Model="CDP"        src="Components\CDP.xml"></Subcomponent>
     <Subcomponent Adapter='' Model='I2CIOServer' Name='Office' src='Components/Office.xml'></Subcomponent>
-    <Subcomponent Model='CDPLogger.CDPLogger' Name='CDPLogger' src='Components/CDPLogger.xml'></Subcomponent>
   </Subcomponents>
 
   <Signals>

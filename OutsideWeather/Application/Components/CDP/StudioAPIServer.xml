@@ -1,7 +1,7 @@
 <Component Name="StudioAPIServer" Model="StudioAPIServer" Description='Provides StudioAPI server for non CDP application integration.' Activate="1">
   <Debug>0</Debug>
   <fs>10</fs>
-  <DefaultPort>7690</DefaultPort>
+  <DefaultPort>7689</DefaultPort>
   <PortRangeUpperLimit>8705</PortRangeUpperLimit>
   <NetworkInterface>ETH0</NetworkInterface>
   <ValueUpdateFs>20</ValueUpdateFs>

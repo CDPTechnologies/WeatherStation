@@ -1,9 +1,7 @@
 TYPE = application
 PROJECTNAME = WeatherStationXApp
 
-DEPS += \
-    i2cio \
-    cdplogger
+DEPS += i2cio
 
 HEADERS += Libraries.h
 SOURCES += CDPMain.cpp

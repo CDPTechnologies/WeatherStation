@@ -1,4 +1,4 @@
-<Component Adapter='' Model='I2CIOServer' Name='Outside' src='Components/Outside.xml'>
+<Component Adapter='/dev/i2c-1' Model='I2CIOServer' Name='Outside' src='Components/Outside.xml'>
   <fs>100</fs>
 
   <Signals>
@@ -25,12 +25,12 @@
       <Channel Input='1' Model='CDPSignalChannel&lt;bool&gt;' Name='Reserved4' Nr='6' Type='bool'></Channel>
       <Channel Input='1' Model='CDPSignalChannel&lt;bool&gt;' Name='Active' Nr='7' Type='bool' Value='1'></Channel></ChannelGroup>
     <ChannelGroup Address='168' CurrentValue='0' Input='1' Name='Humidity'>
-      <Channel Input='0' Model='CDPSignalChannel&lt;short&gt;' Name='CurrentValue' Type='short'>
+      <Channel Input='0' Model='CDPSignalChannel&lt;short&gt;' Name='CurrentValue' Type='short'  Routing=''>
         <Operator Description='The ScalingOperator scales from one range and type to another range and type.' Model='ScalingOperator&lt;double&gt;' Name='Calibrate' Type='double'>
           <ScalingPoint InValue='6' InValueRouting='....Calibration.H0_T0_OUT' Model='ScalingPoint&lt;double&gt;' Name='Low' OutValue='30' OutValueRouting='....Calibration.H0_rH_x2' Type='double'></ScalingPoint>
           <ScalingPoint InValue='-9432' InValueRouting='....Calibration.H1_T0_OUT' Model='ScalingPoint&lt;double&gt;' Name='High' OutValue='68.5' OutValueRouting='....Calibration.H1_rH_x2' Type='double'></ScalingPoint></Operator></Channel></ChannelGroup>
     <ChannelGroup Address='170' CurrentValue='0' Input='1' Name='Temperature'>
-      <Channel Input='0' Model='CDPSignalChannel&lt;short&gt;' Name='CurrentValue' Type='short'>
+      <Channel Input='0' Model='CDPSignalChannel&lt;short&gt;' Name='CurrentValue' Type='short'  Routing=''>
         <Operator Description='The ScalingOperator scales from one range and type to another range and type.' Model='ScalingOperator&lt;double&gt;' Name='Calibrator' Type='double'>
           <ScalingPoint InValue='4' InValueRouting='....Calibration.T0_OUT' Model='ScalingPoint&lt;double&gt;' Name='Low' OutValue='21.125' OutValueRouting='....Calibration.T0_degC_x8' Type='double'></ScalingPoint>
           <ScalingPoint InValue='833' InValueRouting='....Calibration.T1_OUT' Model='ScalingPoint&lt;double&gt;' Name='High' OutValue='35.875' OutValueRouting='....Calibration.T1_degC_x8' Type='double'></ScalingPoint></Operator></Channel></ChannelGroup>
@@ -109,14 +109,14 @@
       <Channel Input='1' Model='CDPSignalChannel&lt;bool&gt;' Name='FIFOEnable' Nr='6' Type='bool'></Channel>
       <Channel Input='1' Model='CDPSignalChannel&lt;bool&gt;' Name='RebootMemContent' Nr='7' Type='bool'></Channel></ChannelGroup>
     <ChannelGroup Address='168' CurrentValue='0' Input='1' Name='Pressure'>
-      <Channel Input='0' Model='CDPSignalChannel&lt;int&gt;' Name='CurrentValue' Type='int'>
+      <Channel Input='0' Model='CDPSignalChannel&lt;int&gt;' Name='CurrentValue' Type='int'  Routing=''>
         <Operator Description='Arithmetic left shift operator' Model='LeftShiftOperator&lt;int&gt;' Name='PurgeMSB' Shift='8' Type='int'></Operator>
         <Operator Description='Arithmetic right shift operator' Model='RightShiftOperator&lt;int&gt;' Name='RestoreMagnitude' Shift='8' Type='int'></Operator>
         <Operator Description='The ScalingOperator scales from one range and type to another range and type.' Model='ScalingOperator&lt;double&gt;' Name='ScaleToSIValue' Type='double'>
           <ScalingPoint InValue='-4096' Model='ScalingPoint&lt;double&gt;' Name='LowerBound' OutValue='-1' Type='double'></ScalingPoint>
           <ScalingPoint InValue='4096' Model='ScalingPoint&lt;double&gt;' Name='UpperBound' OutValue='1' Type='double'></ScalingPoint></Operator></Channel></ChannelGroup>
     <ChannelGroup Address='171' CurrentValue='0' Input='1' Name='Temperature'>
-      <Channel Input='0' Model='CDPSignalChannel&lt;short&gt;' Name='CurrentValue' Type='short'>
+      <Channel Input='0' Model='CDPSignalChannel&lt;short&gt;' Name='CurrentValue' Type='short'  Routing=''>
         <Operator Description='The ScalingOperator scales from one range and type to another range and type.' Model='ScalingOperator&lt;double&gt;' Name='ScalingOperator' Type='double'>
           <ScalingPoint InValue='0' Model='ScalingPoint&lt;double&gt;' Name='ZeroPoint' OutValue='0' Type='double'></ScalingPoint>
           <ScalingPoint InValue='480' Model='ScalingPoint&lt;double&gt;' Name='DivideBy480' OutValue='1' Type='double'></ScalingPoint></Operator>

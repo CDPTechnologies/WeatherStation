@@ -1,4 +1,4 @@
-<Component Model='CDPLogger.CDPLogger' Name='CDPLogger' src='Components/CDPLogger.xml'>
+<Component Model='CDPLogger.CDPLogger' Name='Log' src='Components/Log.xml'>
   <ServerPort>17000</ServerPort>
   <BufferSpanMinutes>0</BufferSpanMinutes>
   <PeriodicLogFrequency>0</PeriodicLogFrequency>
@@ -18,4 +18,16 @@
   </Alarms>
   <Datastore DaysOfHistory='0' Description='Datastore that packs data into keyframes for faster access.
         Optimized for storing values changing with different intervals.' Model='CDPLogger.CDPCompactDatastore' Name='CDPCompactDatastore' SizeLimitGB='0'></Datastore>
+
+  <LoggedValues>
+    <LoggedValue Name='LogOutTemp'  Routing='OutsideWeather.Outside.outPressure.Temperature.CurrentValue'  Description='Office Temperature'></LoggedValue>
+    <LoggedValue Name='LogOutPressure'  Routing='OutsideWeather.Outside.outPressure.Pressure.CurrentValue'  Description='Office Pressure'></LoggedValue>
+    <LoggedValue Name='LogOutHumid'  Routing='OutsideWeather.Outside.outHumid.Humidity.CurrentValue'  Description='Office Humidity'></LoggedValue>
+    <LoggedValue Name='LogInTemp'  Routing='WeatherStationXApp.Office.inPressure.Temperature.CurrentValue'  Description='Outside Temperature'></LoggedValue>
+    <LoggedValue Name='LogInPressure'  Routing='WeatherStationXApp.Office.inPressure.Pressure.CurrentValue'  Description='Outside Pressure'></LoggedValue>
+    <LoggedValue Name='LogInHumid'  Routing='WeatherStationXApp.Office.inHumid.Humidity.CurrentValue'  Description='Outside Humidity'></LoggedValue></LoggedValues>
+
+  <Subcomponents></Subcomponents>
+  
+  
 </Component>
