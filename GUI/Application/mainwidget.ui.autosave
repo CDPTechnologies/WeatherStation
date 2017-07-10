@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="CDPBaseMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Main Window</string>
+  </property>
+  <property name="msgBoxBgSvg">
+   <string>:/themes/flat_light/backgrounds/bgMsgBox.svg</string>
+  </property>
+  <property name="msgBoxBtnSvg">
+   <string>:/themes/flat_light/buttons/buttonPlain.svg</string>
+  </property>
+  <property name="themeNight">
+   <string>flat_dark</string>
+  </property>
+  <property name="themeDay">
+   <string>flat_light</string>
+  </property>
+  <property name="numPadName" stdset="0">
+   <string>CDPBaseNumPad</string>
+  </property>
+  <property name="keyPadName" stdset="0">
+   <string>CDPBaseKeyPad</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_6">
+    <item>
+     <widget class="CDPBaseContainer" name="cdpBaseContainer">
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <widget class="CDPBaseTabWidget" name="cdpBaseTabWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <property name="svgFile">
+          <string>:/themes/flat_light/tabs/tabWidget.svg</string>
+         </property>
+         <property name="stylingType">
+          <enum>CDPBaseTabWidget::SVG</enum>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>Weather</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="CDPBaseContainer" name="cdpBaseContainer_2">
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout"/>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_2">
+                  <item>
+                   <widget class="CDPBaseLabel" name="cdpBaseLabel">
+                    <property name="text">
+                     <string>Office</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout">
+                  <item>
+                   <widget class="CDPBaseMeter" name="cpdBaseMeter_2">
+                    <property name="meterType">
+                     <enum>CDPBaseMeter::Custom</enum>
+                    </property>
+                    <property name="minValue">
+                     <double>-30.000000000000000</double>
+                    </property>
+                    <property name="maxValue">
+                     <double>105.000000000000000</double>
+                    </property>
+                    <property name="textPrefix">
+                     <string>°C</string>
+                    </property>
+                    <property name="textSuffix">
+                     <string>Temperature</string>
+                    </property>
+                    <property name="numPrecision" stdset="0">
+                     <number>0</number>
+                    </property>
+                    <property name="cdpRouting" stdset="0">
+                     <string>Inside.Sensor.pressure.Temperature.CurrentValue.Value</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="CDPBaseMeter" name="cpdBaseMeter">
+                    <property name="meterType">
+                     <enum>CDPBaseMeter::Custom</enum>
+                    </property>
+                    <property name="minValue">
+                     <double>20.000000000000000</double>
+                    </property>
+                    <property name="maxValue">
+                     <double>80.000000000000000</double>
+                    </property>
+                    <property name="value">
+                     <double>20.000000000000000</double>
+                    </property>
+                    <property name="textPrefix">
+                     <string>%</string>
+                    </property>
+                    <property name="textSuffix">
+                     <string>Humidity</string>
+                    </property>
+                    <property name="numPrecision" stdset="0">
+                     <number>0</number>
+                    </property>
+                    <property name="cdpRouting" stdset="0">
+                     <string>Inside.Sensor.humid.Humidity.CurrentValue.Value</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="CDPBaseMeter" name="cpdBaseMeter_3">
+                    <property name="meterType">
+                     <enum>CDPBaseMeter::Custom</enum>
+                    </property>
+                    <property name="minValue">
+                     <double>260.000000000000000</double>
+                    </property>
+                    <property name="maxValue">
+                     <double>1260.000000000000000</double>
+                    </property>
+                    <property name="value">
+                     <double>260.000000000000000</double>
+                    </property>
+                    <property name="textPrefix">
+                     <string>hPa</string>
+                    </property>
+                    <property name="textSuffix">
+                     <string>Pressure</string>
+                    </property>
+                    <property name="numPrecision" stdset="0">
+                     <number>0</number>
+                    </property>
+                    <property name="cdpRouting" stdset="0">
+                     <string>Inside.Sensor.pressure.Pressure.CurrentValue.Value</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="CDPBaseLabel" name="cdpBaseLabel_2">
+                  <property name="text">
+                   <string>Outside</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_2">
+                  <item>
+                   <widget class="CDPBaseMeter" name="cpdBaseMeter_4">
+                    <property name="meterType">
+                     <enum>CDPBaseMeter::Custom</enum>
+                    </property>
+                    <property name="minValue">
+                     <double>-30.000000000000000</double>
+                    </property>
+                    <property name="maxValue">
+                     <double>105.000000000000000</double>
+                    </property>
+                    <property name="textPrefix">
+                     <string>°C</string>
+                    </property>
+                    <property name="textSuffix">
+                     <string>Temperature</string>
+                    </property>
+                    <property name="numPrecision" stdset="0">
+                     <number>0</number>
+                    </property>
+                    <property name="cdpRouting" stdset="0">
+                     <string>Outside.Sensor.pressure.Temperature.CurrentValue.Value</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="CDPBaseMeter" name="cpdBaseMeter_5">
+                    <property name="meterType">
+                     <enum>CDPBaseMeter::Custom</enum>
+                    </property>
+                    <property name="minValue">
+                     <double>20.000000000000000</double>
+                    </property>
+                    <property name="maxValue">
+                     <double>80.000000000000000</double>
+                    </property>
+                    <property name="value">
+                     <double>20.000000000000000</double>
+                    </property>
+                    <property name="textPrefix">
+                     <string>%</string>
+                    </property>
+                    <property name="textSuffix">
+                     <string>Humidity</string>
+                    </property>
+                    <property name="numPrecision" stdset="0">
+                     <number>0</number>
+                    </property>
+                    <property name="cdpRouting" stdset="0">
+                     <string>Outside.Sensor.humid.Humidity.CurrentValue.Value</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="CDPBaseMeter" name="cpdBaseMeter_6">
+                    <property name="meterType">
+                     <enum>CDPBaseMeter::Custom</enum>
+                    </property>
+                    <property name="minValue">
+                     <double>260.000000000000000</double>
+                    </property>
+                    <property name="maxValue">
+                     <double>1260.000000000000000</double>
+                    </property>
+                    <property name="value">
+                     <double>260.000000000000000</double>
+                    </property>
+                    <property name="textPrefix">
+                     <string>hPa</string>
+                    </property>
+                    <property name="textSuffix">
+                     <string>Pressure</string>
+                    </property>
+                    <property name="numPrecision" stdset="0">
+                     <number>0</number>
+                    </property>
+                    <property name="cdpRouting" stdset="0">
+                     <string>Outside.Sensor.pressure.Pressure.CurrentValue.Value</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>Temp</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="CDP::GraphWidgets::DatabaseGraphWidget" name="cdpDatabaseGraphWidget">
+               <property name="databaseUrl">
+                <url>
+                 <string>ip://127.0.0.1:17000</string>
+                </url>
+               </property>
+               <property name="table">
+                <string>SignalTable</string>
+               </property>
+               <property name="xAxisColumn">
+                <string>timestamp</string>
+               </property>
+               <property name="yAxisColumns">
+                <stringlist>
+                 <string>InsideTemperature</string>
+                 <string>OutsideTemperature</string>
+                </stringlist>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_3">
+          <attribute name="title">
+           <string>Humidity</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="CDP::GraphWidgets::DatabaseGraphWidget" name="cdpDatabaseGraphWidget_2">
+               <property name="databaseUrl">
+                <url>
+                 <string>ip://127.0.0.1:17000</string>
+                </url>
+               </property>
+               <property name="table">
+                <string>SignalTable</string>
+               </property>
+               <property name="xAxisColumn">
+                <string>timestamp</string>
+               </property>
+               <property name="yAxisColumns">
+                <stringlist>
+                 <string>InsideHumidity</string>
+                 <string>OutsideHumidity</string>
+                </stringlist>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_4">
+          <attribute name="title">
+           <string>Pressure</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <item>
+              <widget class="CDP::GraphWidgets::DatabaseGraphWidget" name="cdpDatabaseGraphWidget_3">
+               <property name="databaseUrl">
+                <url>
+                 <string>ip://127.0.0.1:17000</string>
+                </url>
+               </property>
+               <property name="table">
+                <string>SignalTable</string>
+               </property>
+               <property name="xAxisColumn">
+                <string>timestamp</string>
+               </property>
+               <property name="yAxisColumns">
+                <stringlist>
+                 <string>InsidePressure</string>
+                 <string>OutsidePressure</string>
+                </stringlist>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDPBaseContainer</class>
+   <extends>QWidget</extends>
+   <header>CDPBaseWidgets/CDPBaseContainer.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseTabWidget</class>
+   <extends>QTabWidget</extends>
+   <header>CDPBaseWidgets/CDPBaseTabWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseLabel</class>
+   <extends>QLabel</extends>
+   <header>CDPBaseWidgets/CDPBaseLabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseMeter</class>
+   <extends>QWidget</extends>
+   <header>CDPBaseWidgets/CDPBaseMeter.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseMainWindow</class>
+   <extends>QMainWindow</extends>
+   <header>CDPBaseWidgets/CDPBaseMainWindow.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CDP::GraphWidgets::DatabaseGraphWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>cdp/graphwidgets/databasegraphwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cdpBaseTabWidget</sender>
+   <signal>tabBarClicked(int)</signal>
+   <receiver>cdpDatabaseGraphWidget_3</receiver>
+   <slot>reconnectToDatabase()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>27</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>112</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cdpBaseTabWidget</sender>
+   <signal>tabBarClicked(int)</signal>
+   <receiver>cdpDatabaseGraphWidget_3</receiver>
+   <slot>autoScale()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>373</x>
+     <y>27</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cdpBaseTabWidget</sender>
+   <signal>tabBarClicked(int)</signal>
+   <receiver>cdpDatabaseGraphWidget_3</receiver>
+   <slot>resume()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>350</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>364</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cdpBaseTabWidget</sender>
+   <signal>tabBarClicked(int)</signal>
+   <receiver>cdpDatabaseGraphWidget_2</receiver>
+   <slot>autoScale()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>258</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>290</x>
+     <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cdpBaseTabWidget</sender>
+   <signal>tabBarClicked(int)</signal>
+   <receiver>cdpDatabaseGraphWidget_2</receiver>
+   <slot>reconnectToDatabase()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>219</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>252</x>
+     <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cdpBaseTabWidget</sender>
+   <signal>tabBarClicked(int)</signal>
+   <receiver>cdpDatabaseGraphWidget_2</receiver>
+   <slot>resume()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>232</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cdpBaseTabWidget</sender>
+   <signal>tabBarClicked(int)</signal>
+   <receiver>cdpDatabaseGraphWidget</receiver>
+   <slot>autoScale()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>150</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>258</x>
+     <y>162</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cdpBaseTabWidget</sender>
+   <signal>tabBarClicked(int)</signal>
+   <receiver>cdpDatabaseGraphWidget</receiver>
+   <slot>reconnectToDatabase()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>133</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>226</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cdpBaseTabWidget</sender>
+   <signal>tabBarClicked(int)</signal>
+   <receiver>cdpDatabaseGraphWidget</receiver>
+   <slot>resume()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>162</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
